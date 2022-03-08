@@ -1,0 +1,17 @@
+<%= form_with(model: eoi_questionaire) do |form| %>
+  <% if eoi_questionaire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eoi_questionaire.errors.count, "error") %> prohibited this eoi_questionaire from being saved:</h2>
+
+      <ul>
+        <% eoi_questionaire.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

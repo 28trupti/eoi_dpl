@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Eoi Questionaires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eoi_questionaires.each do |eoi_questionaire| %>
+      <tr>
+        <td><%= link_to 'Show', eoi_questionaire %></td>
+        <td><%= link_to 'Edit', edit_eoi_questionaire_path(eoi_questionaire) %></td>
+        <td><%= link_to 'Destroy', eoi_questionaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eoi Questionaire', new_eoi_questionaire_path %>

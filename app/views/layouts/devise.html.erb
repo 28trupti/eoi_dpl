@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>EOI Questionaire</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.scss">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%#= javascript_link_tag 'application' %>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bluebg"></div>
+    <div class="container">
+        <div>
+            <div class="row">
+                 <div class="col-lg-4 offset-lg-1 ">
+                    <div class="loginimg">
+                        <%= image_tag('login-image.png') %>
+                    </div>                   
+                </div>
+                <div class="col-lg-5 logintext">
+                    <div class="whitebox">
+                        <h4>Login</h4>                        
+                        <div style="margin-top: 20px;">
+                            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                                <div class="field">
+                                    <%= f.label :email %>
+                                    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control inputtext", placeholder: "Enter your email" %>
+                                </div>
+
+                                <div class="field">
+                                    <%= f.label :password %>
+                                    <%= f.password_field :password, autocomplete: "current-password", class: "form-control inputtext" , placeholder: "Enter password" %>
+                                </div>
+  
+                                <div class="actions">
+                                    <%= f.submit "Log in" ,class: "btn loginbutton"%>
+                                </div>
+                            <% end %>
+                        </div>                        
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
