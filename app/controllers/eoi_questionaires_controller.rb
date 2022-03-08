@@ -27,13 +27,16 @@ class EoiQuestionairesController < ApplicationController
     @eoi_questionaire.user_id = current_user.id
     respond_to do |format|
       if @eoi_questionaire.save
-        format.html { redirect_to eoi_questionaire_url(@eoi_questionaire), notice: "Eoi questionaire was successfully created." }
+        format.html { redirect_to thankyou_url, notice: "Eoi questionaire was successfully created." }
         format.json { render json: {id: @eoi_questionaire }, status: :created, location: @eoi_questionaire }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @eoi_questionaire.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def thankyou
   end
 
   # PATCH/PUT /eoi_questionaires/1 or /eoi_questionaires/1.json

@@ -17,6 +17,7 @@ jQuery(function ($){
             data: {'data': JSON.stringify(data)}, 
             success: function(response){ 
                 alert("Data submitted successfully")
+                window.location.href= "/thankyou"
 
 
 

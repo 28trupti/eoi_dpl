@@ -1,7 +1,13 @@
 class HomeController < ApplicationController
   include Rails.application.routes.url_helpers
   skip_before_action :verify_authenticity_token
+  
   def index
+     
+  end
+
+  def thankyou
+    
   end
 
   def save_attachment 
