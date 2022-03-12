@@ -1,196 +1,171 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>EOI Questionaire</title>
-    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/common.scss">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-
-<body>
-    <div class="container mainhead">
-
-        <div class="row">
-            <div class="col-lg-6">
-                <div><%= image_tag('logo.png') %></div>
-            </div>
-            <div class="col-lg-6">
-                <div class="logouttext">
-                    <a href="<%= destroy_user_session_path %>" data-method="delete">
-                    Logout <i class="fa fa-sign-out"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
         <div class="">
-            <form id="myForm">
+            
                 <div class="text-center headtext">
                     <h4>EOI Questionaire</h4>
                 </div>
                 <div class="deviderline"></div>
 
                 <div>
-                    <h5>Submit PnL and Balance sheet along with schedules for the past 3 FY</h5>
+                    <h5>1. Submit PnL and Balance sheet along with schedules for the past 3 FY</h5>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style= "margin-left: 10px;">
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">A. Balance Sheet for FY 18-19 along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                         
-                                 <input type="file" class="file_upload form-control" />
+                                 <input type="file" class="file_upload form-control" /> 
                                 <input type="hidden" name="balance_sheet18_19" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
+                                <span class= "file_name">
+                                </span>
                         </div>
                         
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4 ">
+                    <div class="row" style="margin-left: 10px;margin-top: 20px";>
+                        <div class="col-lg-6 ">
                             <div>
                                 <label for="">B. Balance Sheet for FY 19-20 along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
-                            
+                        <div class="col-lg-6">
                                 <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "balance_sheet19_20" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                           
+                                <span class= "file_name">
+                                </span>
                         </div>
                         
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">C. Balance Sheet for FY 20-21 along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                             
-                                  <input type="file" class="file_upload form-control" />
+                                <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "balance_sheet20_21" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
-                        </div>
-                        
+                                <span class= "file_name">
+                                </span>
+                        </div>     
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">D. Balance Sheet for Current FY (Half yearly / 9 monthly / Quaterly) along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                         
-                                 <input type="file" class="file_upload form-control" />
+                                <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "balance_sheet_current" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
+                                <span class= "file_name">
+                                </span>
                         </div>
                        
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">E. Profit and Loss Statement for FY 18-19 along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                             
-                                 <input type="file" class="file_upload form-control" />
+                                <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "profit_loss18_19" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
+                                <span class= "file_name">
+                                </span>
                         </div>
                        
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">F. Profit and Loss Statement for FY 19-20 along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                         
                                 <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "profit_loss19_20" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
+                                <span class= "file_name">
+                                </span>
                         </div>
                         
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">G. Profit and Loss Statement for FY 20-21 along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                             
                                 <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "profit_loss20_21" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
+                                <span class= "file_name">
+                                </span>
                         </div>
                         
                     </div>
 
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-lg-4">
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <div class="col-lg-6">
                             <div>
                                 <label for="">H. Profit and Loss Statement  for Current FY (Half yearly / 9 monthly / Quarterly) along with schedules</label>
                             </div>
 
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-6">
                             
                                 <input type="file" class="file_upload form-control" />
                                 <input type="hidden" name= "profit_loss_current" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
-                            
+                                <span class= "file_name">
+                                </span>
                         </div>
                         
                     </div>
 
                 </div>
 
-                <div class="row" style="margin-top: 40px;">
-                    <div>
-                        <h5>Credit Rating</h5>
-                    </div>
-                    <div class="row" style="margin-top: 10px;">
+                <div class= "row" style="margin-top: 10px;">
+                    <h5>2. Credit Rating</h5>
+                </div>
+                <div style="margin-top: 10px;">
+                   
+                    <div class="row col-lg-12 " style="margin-top: 10px;">
                         <div class="col-lg-4">
                             <div>
                                 <label for="">Rating Agency Name</label>
                             </div>
                             <div>
-                                <input type="text" name="ratingagencyname" id="ratingagencyname" class="form-control inputtext required-fields" >
+                                <input type="text" name="ratingagencyname[1]" id="ratingagencyname" data-name="ratingagencyname" class="form-control inputtext required-fields" >
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Credit Ratings</label>
                             </div>
                             <div>
-                                <input type="text" name="creaditratings" id="creaditratings" class="form-control inputtext required-fields" >
+                                <input type="text" name="creaditratings[1]" id="creaditratings" data-name="creaditratings" class="form-control inputtext required-fields" >
                             </div>
                         </div>
 
@@ -198,40 +173,45 @@
                             <div>
                                 <label for="">Upload Document</label>
                             </div>
-                            <div class="row">
+                            
                                 <div class="col-lg-12">
                                     <input type="file" class="file_upload form-control" />
-                                    <input type="hidden" class="form-control inputtext required-fields">
+                                    <input type="hidden" class="form-control inputtext required-fields", name="creditratingfile[1]" data-name= "creditratingfile">
+                                    <span class= "file_name">
+                                    </span>
                                 </div>
-                                
-
-                            </div>
+                              
                         </div>
-
+                        <div class="col-lg-1">
+                            <div>    
+                                <label for= ""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                        </div>
                     </div>
 
+                </div> 
+
+                <div class="row" style="margin-top: 10px;" >
+                    <h5>3. Banking Facilities</h5>
                 </div>
-
-                <div class="row">
-                    <div>
-                        <h5>Banking Facilities</h5>
-                    </div>
-                    <div class="row" style="margin-top: 10px;">
+                <div style="margin-top: 10px;">
+                    <div class="row  col-lg-12" style="margin-top: 10px;">
                         <div class="col-lg-4">
                             <div>
-                                <label for="">Name of the Bank</label>
+                                 <label for="">Name of the Bank</label>
                             </div>
                             <div>
-                                <input type="text" name="bankname" id="bankname" class="form-control inputtext required-fields" >
+                                <input type="text" name="bankname[1]" id="bankname" data-name="bankname" class="form-control inputtext required-fields" >
                             </div>
                         </div>
 
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Facilities availed from the bank</label>
                             </div>
                             <div>
-                                <input type="text" name="bankfacilities" id="bankfacilities" class="form-control inputtext required-fields">
+                                <input type="text" name="bankfacilities[1]" id="bankfacilities" data-name="bankfacilities" class="form-control inputtext required-fields">
                             </div>
                         </div>
 
@@ -240,318 +220,295 @@
                                 <label for="">Limit</label>
                             </div>
                             <div>
-                                <input type="text" name="limit" id="limit" class="form-control inputtext required-fields">
+                                <input type="text" name="limit[1]" id="limit" data-name= "limit" class="form-control inputtext required-fields">
                             </div>
-
                         </div>
-
+                        <div class="col-lg-1">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                        </div>
                     </div>
+
+                <div class="row" style="margin-top: 10px;" >
+                    <h5>4. Sales Organogram</h5>
                 </div>
-
-                <div>
-                    <h5>Sales Organogram</h5>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="row" style="margin-top: 25px;">
-                        <div>
-                            <h6>A . Location of Offices : SPOC for each location</h6>
+                
+                    <div class="row" style="margin-top: 10px;margin-left: 10px";>
+                        <h6>A . Location of Offices : SPOC for each location</h6>
+                    </div>
+                        
+                    <div class="row col-lg-10" style="margin-top: 10px;margin-left: 10px">
+                        <div class="col-lg-5">
+                            <div>
+                                <label for="">Name of location</label>
+                            </div>
+                            <div>
+                                <input type="text" name="locationname[1]" id="locationname" data-name= "locationname" class="form-control inputtext required-fields">
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Name of location</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="locationname" id="locationname" class="form-control inputtext required-fields">
-                                </div>
-                            </div>
 
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">SPOC Name</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="locspocname" id="locspocname" class="form-control inputtext required-fields">
-                                </div>
+                        <div class="col-lg-5">
+                            <div>
+                                <label for="">SPOC Name</label>
                             </div>
+                            <div>
+                                <input type="text" name="locspocname[1]" id="locspocname" data-name= "locspocname" class="form-control inputtext required-fields">
+                            </div>
+                        </div>
+                        <div class="col-lg-2" style= "margin-top: 10px;">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                        </div>
+                    </div>
+                    
+                        
+                
+                    <div class="row" style=" margin-left: 10px";>
+                        <h6>B. Technical Support Team availability</h6>
+                    </div>
+                    <div class="row col-lg-10" style="margin-top: 10px;margin-left: 10px";>
+                        <div class="col-lg-5">
+                            <div>
+                                <label for="">Name of location</label>
+                            </div>
+                            <div>
+                                <input type="text" name="tecnameofloc[1]" id="tecnameofloc" data-name= "tecnameofloc" class="form-control inputtext required-fields" name="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div>
+                                <label for="">SPOC Name</label>
+                            </div>
+                            <div>
+                                <input type="text" name="tecspocname[1]" id="tecspocname" data-name= "tecspocname" class="form-control inputtext required-fields" >
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2" style= "margin-top: 10px;">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div>
-                            <h6>B. Technical Support Team availability</h6>
+                    <div class="row" style=" margin-left: 10px";>
+                        <h6>C.Sales team Details</h6>
+                    </div>
+                        
+                    <div class="row col-lg-12" style="margin-top: 10px;margin-left: 10px";>
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Name of the sales person</label>
+                            </div>
+                            <div>
+                                <input type="text" name="salesteamdetails[1]" id="salesteamdetails"  data-name= "salesteamdetails" class="form-control inputtext required-fields">
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Name of location</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="tecnameofloc" id="tecnameofloc" class="form-control inputtext required-fields" name="">
-                                </div>
-                            </div>
 
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">SPOC Name</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="tecspocname" id="tecspocname" class="form-control inputtext required-fields" >
-                                </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Designation</label>
                             </div>
+                            <div>
+                                <input type="text" name="salesdesignation[1]" id="salesdesignation" data-name= "salesdesignation" class="form-control inputtext required-fields" >
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Years of experience</label>
+                            </div>
+                            <div>
+                                <input type="text" name="salesdexpe[1]" id="salesdexpe" data-name= "salesdexpe" class="form-control inputtext required-fields" >
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-2" style= "margin-top: 10px;">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div>
-                            <h6>C.Sales team Details</h6>
+                    <div class="row" style=" margin-left: 10px";>
+                        <h6>D. Market Analysis Team</h6>
+                    </div>
+                        
+                    <div class="row col-lg-12" style="margin-top: 10px;margin-left:10px";>
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Name of the person</label>
+                            </div>
+                            <div>
+                                <input type="text" name="marketpername[1]" id="marketpername" data-name= "marketpername" class="form-control inputtext required-fields" >
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Name of the sales person</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="salesteamdetails" id="salesteamdetails" class="form-control inputtext required-fields">
-                                </div>
-                            </div>
 
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Designation</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="salesdesignation" id="salesdesignation" class="form-control inputtext required-fields" >
-                                </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Designation</label>
                             </div>
+                            <div>
+                                <input type="text" name="marketdesignation[1]" id="marketdesignation" data-name= "marketdesignation" class="form-control inputtext required-fields" >
+                            </div>
+                        </div>
 
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Years of experience</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="salesdexpe" id="salesdexpe" class="form-control inputtext required-fields" >
-                                </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Years of experience</label>
                             </div>
+                            <div>
+                                <input type="text" name="marketexp[1]" id="marketexp" data-name= "marketexp" class="form-control inputtext required-fields" name="">
+                            </div>
+                        </div>
+                     
+                        <div class="col-lg-2" style= "margin-top: 10px;">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div>
-                            <h6>D. Market Analysis Team</h6>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Name of the person</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="marketpername" id="marketpername" class="form-control inputtext required-fields" >
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Designation</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="marketdesignation" id="marketdesignation" class="form-control inputtext required-fields" >
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Years of experience</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="marketexp" id="marketexp" class="form-control inputtext required-fields" name="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
+                    <div class="row"  style= "margin-left: 10px";>
                         <div>
                             <h6>E. Ready to share market analysis on monthly / quaterly basis</h6>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Name of the person</label>
-                                </div>
-                            </div>
-
+                        
                             <div class="col-lg-8">
                                 <div class="row">
                                     <div class="col-lg-2">
-                                        <input type="radio" name="marketpersonname" id="marketpersonname" onclick="myFunction('myDIV7')"> Yes
+                                        <input type="radio" name="marketpersonname"  class="required-fields" value="yes" onclick="myFunction('myDIV7')"> Yes
                                     </div>
                                     <div class="col-lg-2">
-                                        <input type="radio" name="marketpersonname" id="marketpersonname" onclick="myFunction2('myDIV7')"> No
+                                        <input type="radio" name="marketpersonname"  class="required-fields" value="no" onclick="myFunction2('myDIV7')"> No
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="myDIV7" style="display: none;">
-                        <div class="row" style="margin-top: 20px;">
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control inputtext">
-                            </div>
-                            <div class="col-lg-4">
-                                <input type="file" class="file_upload form-control" />
-                               
-                            </div>
-                        </div>
 
-                    </div>                    
-
-                    <div class="row" style="margin-top: 25px;">
-                        <div>
-                            <h6>F. Account Managers if available</h6>
-                        </div>
-                        <div class="row">
+                    <div id="myDIV7" class= "row" style="display: none;">
+                       <div class="row col-lg-12" style="margin-top: 10px;margin-left: 10px";>
                             <div class="col-lg-4">
-                                <div>
                                     <label for="">Name of the person</label>
-                                </div>
                                 <div>
-                                    <input type="text" name="accpersonmame" id="accpersonmame" class="form-control inputtext required-fields">
+                                    <input type="text" class="form-control inputtext">
                                 </div>
                             </div>
-
                             <div class="col-lg-4">
                                 <div>
-                                    <label for="">Product Name</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="accprodmame" id="accprodmame" class="form-control inputtext required-fields">
+                                <label for= ""> </label>
+                                <input type="file" class="file_upload form-control" />
+                                <input type="hidden" name="file2" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
+                                <span class= "file_name">
+                                </span>
                                 </div>
                             </div>
+                            <div class="col-lg-2" style= "margin-top: 10px;">
+                                <div>
+                                    <label for=""> </label>
+                                </div>
+                                    <a href="javascript:;" class ="addNewTag">Add</a>
+                                </div>
+                            </div>  
+                        </div>                  
 
-                            <div class="col-lg-4">
-                                <div>
-                                    <label for="">Years of experience of handling the product</label>
-                                </div>
-                                <div>
-                                    <input type="text" name="accexp" id="accexp" class="form-control inputtext required-fields">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" style="margin-top: 20px;margin-left: 10px";>
+                        <h6>F. Account Managers if available</h6>
                     </div>
-                </div>
-
-
-
-
-                <div style="margin-top: 20px;">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <h5>Sales Data to be provided in the below format (Upload Excel File)</h5>
+                    
+                    <div class="row col-lg-12" style="margin-top: 10px;margin-left:10px;">
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Name of the person</label>
+                            </div>
+                            <div>
+                                <input type="text" name="accpersonmame[1]" id="accpersonmame" data-name= "accpersonmame" class="form-control inputtext required-fields">
+                            </div>
                         </div>
+
+                        <div class="col-lg-3">
+                            <div>
+                                <label for="">Product Name</label>
+                            </div>
+                            <div>
+                                <input type="text" name="accprodmame[1]" id="accprodmame" data-name= "accprodmame" class="form-control inputtext required-fields">
+                            </div>
+                        </div>
+
                         <div class="col-lg-4">
-                            <input type="file" class="file_upload form-control" />
-                            <input type="hidden" class="form-control inputtext required-fields" placeholder="Upload Excel">
+                            <div>
+                                <label for="">Years of experience of handling the product</label>
+                            </div>
+                            <div>
+                                <input type="text" name="accexp[1]" id="accexp" data-name="accexp" class="form-control inputtext required-fields">
+                            </div>
                         </div>
-                       
-
+                    <div class="col-lg-2" style= "margin-top: 10px;">
+                        <div>
+                            <label for=""> </label>
+                        </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <table class="table table-bordered"
-                        style="background-color: #ffffff; margin-top: 10px; border: 1px solid #cccccc;">
-                        <thead>
-                            <tr>
-                                <th>Customer Name</th>
-                                <th>Product Name</th>
-                                <th>Annual Volume FY 2018-19 (in MT)</th>
-                                <th>Annual Volume FY 2019-20 (in MT)</th>
-                                <th>Annual Volume FY 2020-21 (in MT)</th>
-                                <th>Annual Volumes on pro-rate basis FY 2021-22 (in MT)</th>
-                                <th>Years of service to the customer</th>
-                                <th>Location of Customer</th>
-                                <th>Served from office</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Abc</td>
-                                <td>Acetone</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: right;">4</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Abc</td>
-                                <td>IPA</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: right;">2</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
 
-                            <tr>
-                                <td>Abc</td>
-                                <td>Phenol</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: right;">5</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                
+                    <div class="row" style="margin-top: 10px;">
+                        <div>
+                            <h5>5. Sales Data to be provided in the below format (Upload Excel File)</h5>
+                        </div>
+                        <div class="row col-lg-10" style="margin-top: 10px;">
+                            <div class="col-lg-4">
+                                <div>
+                                     <label for= ""> Upload Document</label>
+                                </div>
+                                <div>
+                                    <input type="file" class="file_upload form-control" />
+                                    <input type="hidden" name="file1" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
+                                    <span class= "file_name">
+                                    </span>
+                                </div>
+                            </div>    
+                        
+                            <div class="col-lg-4">
+                                <div>
+                                    <label for=""></label>
+                                </div>
+                                <div>
+                                    <a href="<%= home_download_excel_url %>" class="btn btn-sm btn-primary" >
+                                Downlad Sample Excel
+                                    </a>
+                                </div>
+                            </div>
 
-                            <tr>
-                                <td>Abc</td>
-                                <td>Acetic Acid</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: right;">10</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            
+                        </div>
+                    </div>
 
-                            <tr>
-                                <td>Xyz</td>
-                                <td>Methanol</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td style="text-align: right;"></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
+                
 
                 <div class="row" style="margin-top: 40px;">
                     <div class="col-lg-4">
-                        <label class="form-label">Customer Service Toll free number available</label>
+                        <label class="form-label">6. Customer Service Toll free number available</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="custservice" id="custservice" type="radio" > Yes
+                                <input name="custservice" value="yes" type="radio" class="required-fields" > Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="custservice" id="custservice" type="radio"> No
+                                <input name="custservice" value="no" type="radio"  class="required-fields"> No
                             </div>
                         </div>
                     </div>
@@ -559,7 +516,7 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Number of Tankers Owned</label>
+                        <label class="form-label">7. Number of Tankers Owned</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="text" name="tankersownedno" id="tankersownedno" class="form-control inputtext required-fields" placeholder="">
@@ -569,57 +526,62 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Number of Tankers Contracted </label>
+                        <label class="form-label">8. Number of Tankers Contracted </label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input type="radio" name="newradio1" id="newradio1" onclick="myFunction('myDIV')"> Yes
+                                <input type="radio" name="newradio1"  class="required-fields" value="yes" onclick="myFunction('myDIV')"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input type="radio" name="newradio1" id="newradio1" onclick="myFunction2('myDIV')"> No
+                                <input type="radio" name="newradio1"   class="required-fields" value="no" onclick="myFunction2('myDIV')"> No
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="myDIV" style="display:none">
-                    <div class="row">
-                        <div class="col-lg-4">
+            
+                <div id="myDIV" class="row" style="display:none" >
+                    <div class="row col-lg-12" style="margin-top: 10px;">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Number of tankers</label>
                             </div>
                             <div>
-                                <input type="text" name="connotankers" id="connotankers" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="connotankers[1]" id="connotankers" dataa-name="connotankers" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Capacity in kL</label>
                             </div>
                             <div>
-                                <input type="text" name="concapacitykl" id="concapacitykl" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="concapacitykl[1]" id="concapacitykl" data-name=""concapacitykl class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Duration of the contract</label>
                             </div>
                             <div>
-                                <input type="text" name="conduracontact" id="conduracontact" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="conduracontact[1]" id="conduracontact" data-name="conduracontact" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
+                        <div class="col-lg-2">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                        <a href="javascript:;" class ="addNewTag">Add</a>
                     </div>
-
+                    </div>
                 </div>
 
                 
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Average age of tankers deployed</label>
+                        <label class="form-label">9. Average age of tankers deployed</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="text" name="averageage" id="averageage" class="form-control inputtext required-fields" name="" placeholder="">
@@ -628,7 +590,7 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Percentage of tankers deployed which conform to Suraksha Certificate
+                        <label class="form-label">10. Percentage of tankers deployed which conform to Suraksha Certificate
                             norms</label>
                     </div>
                     <div class="col-lg-4">
@@ -638,7 +600,7 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Average lead time to arrange tankers for placement at Dahej</label>
+                        <label class="form-label">11. Average lead time to arrange tankers for placement at Dahej</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="text" name="avgoftankers" id="avgoftankers" class="form-control inputtext required-fields" name="" placeholder="">
@@ -647,15 +609,15 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Access to SS / Single Compartment Coiled and Jacketed tankers</label>
+                        <label class="form-label">12. Access to SS / Single Compartment Coiled and Jacketed tankers</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="accesstoss" id="accesstoss" type="radio"> Yes
+                                <input name="accesstoss" value="yes" type="radio"  class="required-fields"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="accesstoss" id="accesstoss" type="radio"> No
+                                <input name="accesstoss" value="no" type="radio"  class="required-fields"> No
                             </div>
                         </div>
                     </div>
@@ -663,50 +625,56 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Access to product tanks in locations close to customers</label>
+                        <label class="form-label">13. Access to product tanks in locations close to customers</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="accesstank" id="accesstank" type="radio" onclick="myFunction('myDIV1')"> Yes
+                                <input name="accesstank" value="yes" type="radio"  class="required-fields" onclick="myFunction('myDIV1')"> Yes
                             </div>
                             <div  class="col-lg-2">
-                                <input name="accesstank" id="accesstank" type="radio" onclick="myFunction2('myDIV1')"> No
+                                <input name="accesstank" value="no" type="radio"  class="required-fields" onclick="myFunction2('myDIV1')"> No
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="myDIV1" style="display: none;">
-                    <div class="row">
-                        <div class="col-lg-4">
+                
+                <div id="myDIV1" class="row" style="display: none;">
+                    <div class="row col-lg-12">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Location of Tanker</label>
                             </div>
                             <div>
-                                <input type="text" name="tankerlocation" id="tankerlocation" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="tankerlocation[1]" id="tankerlocation" data-name="tankerlocation" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Product Name</label>
                             </div>
                             <div>
-                                <input type="text" name="tankerprodname" id="tankerprodname" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="tankerprodname[1]" id="tankerprodname" data-name="tankerprodname" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Capacity</label>
                             </div>
                             <div>
-                                <input type="text" name="tankercapacity" id="tankercapacity" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="tankercapacity[1]" id="tankercapacity" data-name="tankercapacity" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
+                    
+                        <div class="col-lg-2">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                        </div>  
                     </div>
-
                 </div>
 
                 
@@ -714,28 +682,28 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Access to drumming facility</label>
+                        <label class="form-label">14. Access to drumming facility</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="accessdrumming" id="accessdrumming" type="radio" onclick="myFunction('myDIV2')"> Yes
+                                <input name="accessdrumming" value="yes"  class="required-fields" type="radio" onclick="myFunction('myDIV2')"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="accessdrumming" id="accessdrumming" type="radio" onclick="myFunction2('myDIV2')"> No
+                                <input name="accessdrumming" value="no"  class="required-fields" type="radio" onclick="myFunction2('myDIV2')"> No
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="myDIV2" style="display: none;">
-                    <div class="row">
+                <div id="myDIV2" class= "row" style="display: none;">
+                    <div class="row col-lg-10">
                         <div class="col-lg-4">
                             <div>
                                 <label for="">Location of drumming facility</label>
                             </div>
                             <div>
-                                <input type="text" name="locdrumming" id="locdrumming" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="locdrumming[1]" id="locdrumming" data-name="locdrumming" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -743,9 +711,16 @@
                                 <label for="">Owned / Third Party</label>
                             </div>
                             <div>
-                                <input type="text" name="ownedthird" id="ownedthird" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="ownedthird[1]" id="ownedthird" data-name= "ownedthird" class="form-control inputtext required-fields" name="">
                             </div>
-                        </div>
+                        
+                    </div>
+                    <div class= "col lg-2">
+                            <div>
+                                <label for=""> </label>
+                            </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                    </div>
                     </div>
                 </div>
 
@@ -753,93 +728,106 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Warehouses available</label>
+                        <label class="form-label">15. Warehouses available</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="wareavailable" id="wareavailable" type="radio" onclick="myFunction('myDIV3')"> Yes
+                                <input name="wareavailable" value="yes"  class="required-fields" type="radio" onclick="myFunction('myDIV3')"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="wareavailable" id="wareavailable" type="radio" onclick="myFunction2('myDIV3')"> No
+                                <input name="wareavailable" value="no"  class="required-fields" type="radio" onclick="myFunction2('myDIV3')"> No
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="myDIV3" style="display: none;">
-                    <div class="row">
-                        <div class="col-lg-4">
+                <div id="myDIV3" class= "row" style="display: none;">
+                     <div class="row col-lg-12">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Location</label>
                             </div>
                             <div>
-                                <input type="text" name="warehoselocation" id="warehoselocation" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="warehoselocation[1]" id="warehoselocation" data-name="warehoselocation" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Warehouse Area in Sq Ft</label>
                             </div>
                             <div>
-                                <input type="text" name="warehosearea" id="warehosearea" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="warehosearea[1]" id="warehosearea" data-name= "warehosearea" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                        <div class="col-lg-4">
+                        <div class="col-lg-3">
                             <div>
                                 <label for="">Owned / Third Party</label>
                             </div>
                             <div>
-                                <input type="text" name="warehoseownedthird" id="warehoseownedthird" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="warehoseownedthird[1]" id="warehoseownedthird" data-name= "warehoseownedthird" class="form-control inputtext required-fields" name="">
                             </div>
+                        
+                    </div> 
+                    <div class= "col-lg-2">  
+                        <div>
+                            <label for=""> </label>
                         </div>
-                    </div>   
-                
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                    </div> 
+                    </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Willingness to share GPS and API of every tanker</label>
+                        <label class="form-label">16. Willingness to share GPS and API of every tanker</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="willshare" id="willshare" type="radio" onclick="myFunction('myDIV4')"> Yes
+                                <input name="willshare" value="yes"  class="required-fields" type="radio" onclick="myFunction('myDIV4')"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input  name="willshare" id="willshare" type="radio" onclick="myFunction2('myDIV4')"> No
+                                <input  name="willshare" value="no"   class="required-fields" type="radio" onclick="myFunction2('myDIV4')"> No
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="myDIV4" style="display: none;">
-                    <div class="row">
-                        <div class="col-lg-4">
+                <div id="myDIV4" class= "row" style="display: none;">
+                     <div class="row col-lg-10">
+                        <div class="col-lg-8">
                             <div>
                                 <label for="">Name of GPS / API service provider</label>
                             </div>
                             <div>
-                                <input type="text" name="willname" id="willname" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="willname[1]" id="willname" dataname= "willname"  class="form-control inputtext required-fields" name="">
                             </div>
+                        
+                    </div>
+                    <div class= "col-lg-2">
+                        <div>
+                            <label for=""> </label>
                         </div>
-                    </div>                
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                    </div>  
+                    </div>            
                 </div>
 
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Willingness for door delivery</label>
+                        <label class="form-label">17. Willingness for door delivery</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="willdoor" id="willdoor" type="radio"> Yes
+                                <input name="willdoor" value="yes"  class="required-fields" type="radio"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="willdoor" id="willdoor" type="radio"> No
+                                <input name="willdoor" value="no"  class="required-fields" type="radio"> No
                             </div>
                         </div>
                     </div>
@@ -847,28 +835,28 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Availability of IT systems (ERP, CRM, Accounting etc)</label>
+                        <label class="form-label">18. Availability of IT systems (ERP, CRM, Accounting etc)</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="avaiIT" id="avaiIT" type="radio" onclick="myFunction('myDIV5')"> Yes
+                                <input name="avaiIT" value="yes"  class="required-fields" type="radio" onclick="myFunction('myDIV5')"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="avaiIT" id="avaiIT" type="radio" onclick="myFunction2('myDIV5')"> No
+                                <input name="avaiIT" value="no"  class="required-fields" type="radio" onclick="myFunction2('myDIV5')"> No
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="myDIV5" style="display: none;">
-                    <div class="row">
+                <div id="myDIV5" class="row" style="display: none;">
+                    <div class="row col-lg-10">
                         <div class="col-lg-4">
                             <div>
                                 <label for="">Name of the system available</label>
                             </div>
                             <div>
-                                <input type="text" name="availITname" id="availITname" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="availITname[1]" id="availITname" data-name="availITname" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
@@ -877,17 +865,24 @@
                                 <label for="">Years in operation</label>
                             </div>
                             <div>
-                                <input type="text" name="availyears" id="availyears" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="availyears[1]" id="availyears" data-name="availyears" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
-                    </div>                
+                   
+                    <div class="col-lg-2 ">
+                        <div>
+                            <label for=""> </label>
+                        </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                     </div> 
+                      </div>          
                 </div>
 
                 
 
                 <div>
-                    <h5>Product of interest for Sales</h5>
+                    <h5>19. Product of interest for Sales</h5>
                 </div>
 
                 <div>
@@ -936,15 +931,15 @@
 
                 <div class="row" style="margin-top: 30px;">
                     <div class="col-lg-4">
-                        <label class="form-label">Willing to work with channel financiers if so desired by DPL</label>
+                        <label class="form-label">20. Willing to work with channel financiers if so desired by DPL</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="willwork" id="willwork" type="radio"> Yes
+                                <input name="willwork" value="yes"  class="required-fields" type="radio"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="willwork" id="willwork" type="radio"> No
+                                <input name="willwork" value="no" class="required-fields" type="radio"> No
                             </div>
                         </div>
                     </div>
@@ -952,29 +947,29 @@
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <label class="form-label">Target sales in drums for small customers</label>
+                        <label class="form-label">21. Target sales in drums for small customers</label>
                     </div>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-2">
-                                <input name="targetsales" id="targetsales" type="radio" onclick="myFunction('myDIV6')"> Yes
+                                <input name="targetsales" value="yes"  class="required-fields" type="radio" onclick="myFunction('myDIV6')"> Yes
                             </div>
                             <div class="col-lg-2">
-                                <input name="targetsales" id="targetsales" type="radio" onclick="myFunction2('myDIV6')"> No
+                                <input name="targetsales" value="no"  class="required-fields" type="radio" onclick="myFunction2('myDIV6')"> No
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-                <div id="myDIV6" style="display: none;">
-                    <div class="row">
+                <div id="myDIV6" class="row" style="display: none;">
+                    <div class="row col-lg-10">
                         <div class="col-lg-4">
                             <div>
                                 <label for="">Product Name</label>
                             </div>
                             <div>
-                                <input type="text" name="targetprodname" id="targetprodname" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="targetprodname[1]" id="targetprodname" data-name= "targetprodname" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>
     
@@ -983,29 +978,34 @@
                                 <label for="">Annual Target volumes (in MT)</label>
                             </div>
                             <div>
-                                <input type="text" name="targetannual" id="targetannual" class="form-control inputtext required-fields" name="">
+                                <input type="text" name="targetannual[1]" id="targetannual" data-name= "targetannual" class="form-control inputtext required-fields" name="">
                             </div>
                         </div>    
-                    </div>                
+                    <div class="col-lg-2 ">
+                        <div>
+                            <label for=""> </label>
+                        </div>
+                            <a href="javascript:;" class ="addNewTag">Add</a>
+                    </div>     
+                    </div>        
                 </div>
-                
 
 
                 <div style="margin-top: 30px; margin-bottom: 80px; text-align: center;">
+                    <button type="button" name="save" value="Submit" class="btn btn-success form-save">Save</button>
                     <button type="submit" name="submit" value="Submit" class="btn btn-primary form-submit">Submit</button>
-                    <button type="" name="cancel" value="cancel" class="btn btn-danger">Cancel</button>
+                    <%= link_to "Cancel", index_path , class: "btn btn-danger" %>
                 </div>
-            </form>
+            
 
             <p class="result-json-output"></p>
             <div class="col-lg-12 results alert alert-info mt-3" style="word-wrap: break-word;">
             </div>
             
         </div>
-
     </div>
-    <input type="hidden" id="json-data" />
-    <script>        
+    <script> 
+
         function myFunction(ele) {
             $('#'+ele).show();
             // document.getElementById(ele).style.display="block";  
@@ -1018,23 +1018,61 @@
 
 
         $(document).ready(function(){
-    console.log("file loaded");
-    $(".file_upload").on("change", function(){
+        console.log("file loaded");
+        $("body").on("change",'.file_upload' ,function(){
         element = $(this)
         const formdata = new FormData()
         formdata.append('file', this.files[0])
-
-
         $.ajax({
             url: "save_attachment",
             method: "POST",
             data: formdata,
             success: function(response){
                 element.next().val(response.url)
+                element.next().next().html("<a href="+response.url+">"+response.url.split('/').pop()+"</a>")
             },
             contentType: false,
             processData: false,
         })
     })
+
+        
+
+        <% if @eoi_questionaire.present? %>
+            var data = <%= raw @eoi_questionaire.form_data %>
+            for( name in data){
+                if($("input[name='"+name+"']").length >  0 ){
+                    element = $("input[name='"+name+"']")
+                    if(element.attr('type')=='radio'){
+                        console.log($("input[name='"+ name +"'][value='"+data[name]+"']"))
+                        $("input[name='"+ name +"'][value='"+data[name]+"']").prop("checked", true)
+                    }else{
+                        $("input[name='"+name+"']").val(data[name])
+                        if(element.attr('type')=='hidden'){
+                            element.next().html("<a href="+data[name]+">"+data[name].split('/').pop()+"</a>")
+                        }
+                    }
+                }
+                else{
+                    index_num = name.match(/(\d+)/)[0]
+                    parent = $("input[name='"+name.split("[")[0]+"[1]']").parent().parent().parent()
+                    console.log(parent)
+                    clone = parent.clone()
+                    inputs = clone.find('input')
+                    clone.find("input").val("")
+                    for(var i=0; i<inputs.length; i++){
+                        new_name = $(inputs[i]).data('name') +"["+ index_num + "]"
+                        $(inputs[i]).attr('name', new_name)
+                        if(name === new_name){
+                            $(inputs[i]).val(data[name])
+                        }
+                    }
+                    $(clone).insertAfter(parent)              
+                }
+            }
+        <% end %>
+ 
+ 
+
 })
 </script>

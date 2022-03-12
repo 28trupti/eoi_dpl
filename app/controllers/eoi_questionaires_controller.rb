@@ -25,6 +25,7 @@ class EoiQuestionairesController < ApplicationController
   def create
     @eoi_questionaire = EoiQuestionaire.new(form_data: params[:data])
     @eoi_questionaire.user_id = current_user.id
+    @eoi_questionaire.completed = params[:completed]
     respond_to do |format|
       if @eoi_questionaire.save
         format.html { redirect_to thankyou_url, notice: "Eoi questionaire was successfully created." }
@@ -70,6 +71,6 @@ class EoiQuestionairesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def eoi_questionaire_params
-      params.fetch(:eoi_questionaire, :file ,:user_id)
+      params.fetch(:eoi_questionaire, :file ,:user_id, :form_data)
     end
 end

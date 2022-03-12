@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "eoi_questionaires") do |sheet|
+    if @eoi_questionaire.form_data.present?
+        data  = JSON.parse(@eoi_questionaire.form_data)
+        sheet.add_row data.keys
+        sheet.add_row data.values
+    end
+end
