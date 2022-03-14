@@ -1,4 +1,16 @@
+<div class= "row">
+            <div class="col-lg-6">
+                <div><%= image_tag('logo.png') %></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="logouttext">
+                    <a href="<%= destroy_user_session_path %>" data-method="delete">
+                    Logout <i class="fa fa-sign-out"></i>
+                    </a>
+                </div>
 
+            </div>
+</div>
         <div class="">
             
                 <div class="text-center headtext">
@@ -202,7 +214,7 @@
                                  <label for="">Name of the Bank</label>
                             </div>
                             <div>
-                                <input type="text" name="bankname[1]" id="bankname" data-name="bankname" class="form-control inputtext required-fields" >
+                                <input type="text" name="bankname[1]" id="bankname" data-name= "bankname" class="form-control inputtext required-fields" >
                             </div>
                         </div>
 
@@ -211,7 +223,7 @@
                                 <label for="">Facilities availed from the bank</label>
                             </div>
                             <div>
-                                <input type="text" name="bankfacilities[1]" id="bankfacilities" data-name="bankfacilities" class="form-control inputtext required-fields">
+                                <input type="text" name="bankfacilities[1]" id="bankfacilities" data-name= "bankfacilities" class="form-control inputtext required-fields">
                             </div>
                         </div>
 
@@ -401,14 +413,14 @@
                             <div class="col-lg-4">
                                     <label for="">Name of the person</label>
                                 <div>
-                                    <input type="text" class="form-control inputtext">
+                                    <input type="text" class="form-control inputtext required-fields" name= "marketpersonname[1]" data-name="marketpersonname" id= "marketpersonname" name="">
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div>
                                 <label for= ""> </label>
                                 <input type="file" class="file_upload form-control" />
-                                <input type="hidden" name="file2" class="form-control inputtext required-fields" name="" placeholder="No File Choosen">
+                                <input type="hidden" name="file2[1]" data-name= "file2" class="form-control inputtext required-fields" id= "file2" name="" placeholder="No File Choosen">
                                 <span class= "file_name">
                                 </span>
                                 </div>
@@ -420,7 +432,8 @@
                                     <a href="javascript:;" class ="addNewTag">Add</a>
                                 </div>
                             </div>  
-                        </div>                  
+                        </div>    
+                   
 
                     <div class="row" style="margin-top: 20px;margin-left: 10px";>
                         <h6>F. Account Managers if available</h6>
@@ -466,7 +479,7 @@
                 
                     <div class="row" style="margin-top: 10px;">
                         <div>
-                            <h5>5. Sales Data to be provided in the below format (Upload Excel File)</h5>
+                            <label class="form-label">5. Sales Data to be provided in the below format (Upload Excel File)</label>
                         </div>
                         <div class="row col-lg-10" style="margin-top: 10px;">
                             <div class="col-lg-4">
@@ -803,7 +816,7 @@
                                 <label for="">Name of GPS / API service provider</label>
                             </div>
                             <div>
-                                <input type="text" name="willname[1]" id="willname" dataname= "willname"  class="form-control inputtext required-fields" name="">
+                                <input type="text" name="willname[1]" id="willname" data-name= "willname"  class="form-control inputtext required-fields" name="">
                             </div>
                         
                     </div>
@@ -882,7 +895,7 @@
                 
 
                 <div>
-                    <h5>19. Product of interest for Sales</h5>
+                    <label class="form-label">19. Product of interest for Sales</label>
                 </div>
 
                 <div>
