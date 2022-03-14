@@ -14,6 +14,10 @@ class HomeController < ApplicationController
 
   end
 
+  def submit_thankyou
+  
+  end
+
   def instruction
 
   end

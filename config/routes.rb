@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'index', to: 'home#index'
   get "home/download_excel"
   get 'thankyou', to: 'home#thankyou'
+  get 'submit_thankyou', to: 'home#submit_thankyou'
   get 'users', to: 'home#users'
   get 'report', to: 'home#report'
 

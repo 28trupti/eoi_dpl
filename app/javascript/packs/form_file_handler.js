@@ -32,7 +32,7 @@ jQuery(function ($){
                 data: {'data': JSON.stringify(data),completed: true}, 
                 success: function(response){ 
                     alert("Data submitted successfully")
-                    window.location.href= "/thankyou"
+                    window.location.href= "/submit_thankyou"
                 }
     
             })
