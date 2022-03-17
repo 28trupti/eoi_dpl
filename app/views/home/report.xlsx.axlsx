@@ -1,8 +1,353 @@
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "eoi_questionaires") do |sheet|
-    if @eoi_questionaire.form_data.present?
-        data  = JSON.parse(@eoi_questionaire.form_data)
-        sheet.add_row data.keys
-        sheet.add_row data.values
+    data = JSON.parse(@eoi_questionaire.form_data)
+  sheet.add_row(["1. Submit PnL and Balance sheet along with schedules for the past 3 FY"])
+  sheet.add_row(["Balance Sheet for FY 18-19 along with schedules", data["balance_sheet18_19"]])
+  sheet.add_row(["Balance Sheet for FY 19-20 along with schedules", data["balance_sheet19_20"]])
+  sheet.add_row(["Balance Sheet for FY 20-21 along with schedules",data["balance_sheet20_21"]])
+  sheet.add_row(["Balance Sheet for Current FY (Half yearly  9 monthly  Quaterly) along with schedules", data["balance_sheet_current"]])
+  sheet.add_row(["Profit and Loss Statement for FY 18-19 along with schedulesstion1", data["profit_loss18_19"]])
+  sheet.add_row(["Profit and Loss Statement for FY 19-20 along with schedules", data["profit_loss19_20"]])
+  sheet.add_row(["Profit and Loss Statement for FY 20-21 along with schedules", data["profit_loss20_21"]])
+  sheet.add_row(["Profit and Loss Statement for Current FY (Half yearly / 9 monthly / Quarterly) along with schedules", data["profit_loss_current"]])
+  sheet.add_row(["2. Credit Rating"])
+  d = []
+  d << "Rating Agency Name"
+  data.each do |key, value|
+    if key.include? "ratingagencyname"
+      d << value
     end
+  end 
+  sheet.add_row(d)
+  d = []
+  d << "Credit Rating"
+  data.each do |key, value|
+    if key.include? "creaditratings"
+      d << value
+    end
+  end 
+  sheet.add_row(d)
+   d = []
+  d << "Upload Document"
+  data.each do |key, value|
+    if key.include? "creditratingfile"
+      d << value
+    end
+  end 
+  sheet.add_row(d)
+  sheet.add_row(["3. Banking Facilities"])
+  d = []
+  d << "Name of the Bank"
+  data.each do |key, value|
+    if key.include? "bankname"
+      d << value
+    end
+  end 
+  sheet.add_row(d)
+  d = []
+  d << "Facilities availed from the bank"
+  data.each do |key, value|
+    if key.include? "bankfacilities"
+      d << value
+    end
+  end 
+  sheet.add_row(d)
+  d = []
+  d << "Limit"
+  data.each do |key, value|
+    if key.include? "limit"
+      d << value
+    end
+  end 
+  sheet.add_row(d)
+  sheet.add_row(["4. Sales Organogram"])
+  sheet.add_row(["A. Location of Offices : SPOC for each location"])
+  d = []
+  d << "Name of location"
+  data.each do |key, value|
+    if key.include? "locationname"
+      d << value
+    end
+  end 
+  sheet.add_row(d)
+  d = []
+  d << "SPOC Name"
+  data.each do |key, value|
+    if key.include? "locspocname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["B.Technical Support Team availability"])
+  d = []
+  d << "Name of location"
+  data.each do |key, value|
+    if key.include? "tecnameofloc"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "SPOC Name"
+  data.each do |key, value|
+    if key.include? "tecspocname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["C. Sales team Details"])
+  d = []
+  d << "Name of the sales person"
+  data.each do |key, value|
+    if key.include? "salesteamdetails"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Designation"
+  data.each do |key, value|
+    if key.include? "salesdesignation"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Total experience(In Months)"
+  data.each do |key, value|
+    if key.include? "salesdexpe"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row([" D. Market Analysis Team"])
+  d = []
+  d << "Name of the person"
+  data.each do |key, value|
+    if key.include? "marketpername"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Designation"
+  data.each do |key, value|
+    if key.include? "marketdesignation"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Total experience(In Months)"
+  data.each do |key, value|
+    if key.include? "marketexp"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["E. Ready to share market analysis on monthly / quaterly basis",data["marketpersonname"]])
+  d = []
+  d << "Name of the person"
+  data.each do |key, value|
+    if key.include? "marketpersonname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Upload File"
+  data.each do |key, value|
+    if key.include? "file2"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["F. Account Managers if available"])
+  d = []
+  d << "Name of the person"
+  data.each do |key, value|
+    if key.include? "accpersonmame"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Product Name"
+  data.each do |key, value|
+    if key.include? "accprodmame"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Total experience of handling the product(In Months)"
+  data.each do |key, value|
+    if key.include? "accexp"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["5. Sales Data to be provided in the below format (Upload Excel File)"])
+  sheet.add_row(["Upload Document", data["file1"]])
+  sheet.add_row([" 6. Customer Service Toll free number available", data["custservice"]])
+  sheet.add_row([" 7. Number of Tankers Owned", data["tankersownedno"]])
+  sheet.add_row(["8. Contracted  tankers availability", data["newradio1"]])
+  d = []
+  d << "Number of tankers"
+  data.each do |key, value|
+    if key.include? "connotankers"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Capacity in kL"
+  data.each do |key, value|
+    if key.include? "concapacitykl"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Duration of the contract(In Months)"
+  data.each do |key, value|
+    if key.include? "conduracontact"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["9.Average age of tankers deployed(In Months)", data["averageage"]])
+  sheet.add_row(["10. Percentage of tankers deployed which conform to Suraksha Certificate norms", data["peroftankers"]])
+  sheet.add_row(["11. Average lead time to arrange tankers for placement at Dahej(In Days)", data["avgoftankers"]])
+  sheet.add_row(["12. Access to SS / Single Compartment Coiled and Jacketed tankers", data["accesstoss"]])
+  sheet.add_row(["13. Access to product tanks in locations close to customers", data["accesstank"]])
+  d = []
+  d << "Location of Tanker"
+  data.each do |key, value|
+    if key.include? "tankerlocation"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Product Name"
+  data.each do |key, value|
+    if key.include? "tankerprodname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Capacity(In KL)"
+  data.each do |key, value|
+    if key.include? "tankercapacity"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["14. Access to drumming facility", data["accessdrumming"]])
+  d = []
+  d << "Location of drumming facility"
+  data.each do |key, value|
+    if key.include? "locdrumming"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Owned / Third Party"
+  data.each do |key, value|
+    if key.include? "ownedthird"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row([" 15. Warehouses available", data["wareavailable"]])
+  d = []
+  d << "Location"
+  data.each do |key, value|
+    if key.include? "warehoselocation"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Warehouse Area in Sq Ft"
+  data.each do |key, value|
+    if key.include? "warehosearea"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Owned / Third Party"
+  data.each do |key, value|
+    if key.include? "warehoseownedthird"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row([" 16.Willingness to share GPS and API of every tanker", data["willshare"]])
+  d = []
+  d << "Name of GPS / API service provider"
+  data.each do |key, value|
+    if key.include? "willname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["17.Willingness for door delivery", data["willdoor"]])
+  sheet.add_row(["18. Availability of IT systems (ERP, CRM, Accounting etc)", data["avaiIT"]])
+  d = []
+  d << "Name of the system available"
+  data.each do |key, value|
+    if key.include? "availITname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Years in operation(In Months)"
+  data.each do |key, value|
+    if key.include? "availyears"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  sheet.add_row(["19. Product of interest for Sales"])
+  sheet.add_row(["Product Name - Phenol"])
+  sheet.add_row(["Annual Target volumes (in MT)", data["annualtarget1"]])
+  sheet.add_row(["% commission expected", data["commissionexpected1"]])
+  sheet.add_row(["Credit Terms Desired", data["credittearms1"]])
+  sheet.add_row(["Product Name - Aceton"])
+  sheet.add_row(["Annual Target volumes (in MT)", data["annualtarget2"]])
+  sheet.add_row(["% commission expected", data["commissionexpected2"]])
+  sheet.add_row(["Credit Terms Desired", data["credittearms2"]])
+  sheet.add_row(["Product Name -IPA"])
+  sheet.add_row(["Annual Target volumes (in MT)", data["annualtarget3"]])
+  sheet.add_row(["% commission expected", data["commissionexpected3"]])
+  sheet.add_row(["Credit Terms Desired", data["credittearms3"]])
+  sheet.add_row(["Product Name - AWS"])
+  sheet.add_row(["Annual Target volumes (in MT)", data["annualtarget4"]])
+  sheet.add_row(["% commission expected", data["commissionexpected4"]])
+  sheet.add_row(["Credit Terms Desired", data["credittearms4"]])
+  sheet.add_row(["20. Willing to work with channel financiers if so desired by DPL", data["willwork"]])
+  sheet.add_row(["21. Willingness for sales in drums for small customers", data["targetsales"]])
+  d = []
+  d << "Product Name"
+  data.each do |key, value|
+    if key.include? "targetprodname"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+  d = []
+  d << "Annual Target volumes (in MT)"
+  data.each do |key, value|
+    if key.include? "targetannual"
+      d << value
+    end
+  end
+  sheet.add_row(d)
+
 end

@@ -2,30 +2,42 @@ jQuery(function ($){
     window.get_json_data = function(){
             let json_data = {}
             let data_found = false
+            let all_data_filled = []
+            let all_data_filled_status = true
+            let empty_fields = []
             input_fields = $(".required-fields")
             for(var i=0; i<input_fields.length; i++){
-                console.log($(input_fields[i]).attr('type'))
                     if($(input_fields[i]).attr('type')=='radio'){
-                        console.log($(input_fields[i]).prop("checked"));
                         if($(input_fields[i]).prop('checked')){
                             data_found = true 
                             json_data[input_fields[i].name] = input_fields[i].value
                         }
-                    }else{
+                    }
+                    else { 
                         json_data[input_fields[i].name] = input_fields[i].value
                         if(input_fields[i].value){
                             data_found = true
+                        }else{
+                            if ($(input_fields[i]).hasClass("required")){
+                                all_data_filled_status = false
+                                empty_fields.push(input_fields[i])
+                            }
+                            }
                         }
                     }
-            }
-            return {data: json_data, data_found: data_found}
+                    console.log(empty_fields)
+                    console.log(all_data_filled_status)
+            
+            
+
+        return { data: json_data, data_found: data_found, all_data_filled_status: all_data_filled_status}
         }
 
     $(".form-submit").on("click", function(e){
         e.preventDefault()
+        const { data, data_found, all_data_filled_status} = window.get_json_data()
         if(window.confirm("Note: If you submitted form once then you cant refilled again ")){
-        const {data, data_found} = window.get_json_data()
-        if(data_found){
+            if (all_data_filled_status){
             $.ajax({
                 url: "eoi_questionaires.json",
                 method: "post",
@@ -43,7 +55,8 @@ jQuery(function ($){
     })
 
     $(".form-save").on("click", function(e) {
-        let {data, data_found} = window.get_json_data()
+        let { data, data_found, all_data_filled} = window.get_json_data()
+        console.log(data)
         if(data_found){
         $.ajax({
             url: "eoi_questionaires.json",
@@ -85,6 +98,14 @@ jQuery(function ($){
 
     $("body").on("click", ".removeNewTag", function(e){
         $(e.currentTarget).parent().parent().remove()
+    }) 
+
+    $(".instruction-submit").on("click", function(){
+        if($(".instruction-checkbox").prop("checked")){
+            window.location.href="/index"
+        }else{
+            alert("Please click on confirmation to procced")
+        }
     })
 
 })
