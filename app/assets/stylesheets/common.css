@@ -61,6 +61,21 @@ html {scroll-behavior: smooth;}
 .uploadbutton{background-color:rgb(0, 108, 151); color: #ffffff; font-size: 13px;}
 .uploadbutton:hover{color: #ffffff;}
 .inputtext{font-size: 14px; margin-bottom: 20px; height: 35px;}
-.mainhead h5{margin-top: 10px; font-size: 18px!important;}
+h5{margin-top: 10px; font-size: 16px!important;}
 .logo{margin-top: 10px;}
 .logouttext{text-align: right; margin-top: 20px; font-size:16px;}
+.credit-rating-row:first-child .remove{display:none}
+.banking-facilities-row:first-child .remove{display:none}
+.location-office-row:first-child .remove{display:none}
+.technical-support-row:first-child .remove{display:none}
+.sales-team-row:first-child .remove{display:none}
+.market-analysis-row:first-child .remove{display:none}
+.sharemarket-analysis-row:first-child .remove{display:none}
+.account-manager-row:first-child .remove{display:none}
+.contracted-tankers-row:first-child .remove{display:none}
+.access-product-row:first-child .remove{display:none}
+.access-drumming-row:first-child .remove{display:none}
+.warehouse-row:first-child .remove{display:none}
+.willingness-row:first-child .remove{display:none}
+.availability-row:first-child .remove{display:none}
+.targetsales-row:first-child .remove{display:none}

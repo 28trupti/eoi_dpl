@@ -14,6 +14,7 @@ jQuery(function ($){
                         }
                     }
                     else { 
+                        console.log(input_fields[i].value)
                         json_data[input_fields[i].name] = input_fields[i].value
                         if(input_fields[i].value){
                             data_found = true
@@ -75,7 +76,8 @@ jQuery(function ($){
     })
 
     $("body").on('click','.addNewTag',function (e) {
-        new_fields = $(e.currentTarget).parent().parent().clone()
+        // new_fields = $(e.currentTarget).parent().parent().clone()
+        new_fields = $("." + $(e.currentTarget).attr("data-target")).clone()
         input_fields = new_fields.find('input')
         for (var i = 0; i < input_fields.length; i++) {
             element = $(input_fields[i])
@@ -90,13 +92,29 @@ jQuery(function ($){
             }
             element.val("")
         }
-        remove_button = $(e.currentTarget).parent()
-        $(new_fields[0]).insertBefore($(e.currentTarget).parent().parent())
-        remove_button.html("<div><label></label></div><a href='#' class='removeNewTag'>Remove</a>")
+        input_fields = new_fields.find('select')
+        for (var i = 0; i < input_fields.length; i++) {
+            element = $(input_fields[i])
+            if (element.attr('type') != "file") {
+                name = element.data('name')
+                total_fields = $("[data-name='" + name + "']").length + 1
+                element.attr('name', element.data('name') + "[" + total_fields + "]")
+            }
+            console.log(new_fields.find(".file_name"));
+            if (new_fields.find('.file_name').length >= 1) {
+                new_fields.find(".file_name").html("")
+            }
+            element.val("")
+        }
+
+        // remove_button = $(e.currentTarget).parent()
+        $("." + $(e.currentTarget).attr("data-target-parent")).append($(new_fields[0]))
+        // $(new_fields[0]).insertBefore($(".credit-rating-row"))
+        // remove_button.html("<div><label></label></div><a href='#' class='remove'>Remove</a>")
     });
 
 
-    $("body").on("click", ".removeNewTag", function(e){
+    $("body").on("click", ".remove", function(e){
         $(e.currentTarget).parent().parent().remove()
     }) 
 
