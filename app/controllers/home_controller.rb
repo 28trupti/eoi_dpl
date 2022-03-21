@@ -33,7 +33,7 @@ class HomeController < ApplicationController
   def report
     @eoi_questionaire = User.find(params[:user_id]).eoi_questionaires.where(completed: true).last
     respond_to do|format|
-            format.xlsx
+          format.xlsx
     end
   end
 
