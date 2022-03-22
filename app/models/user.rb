@@ -9,4 +9,11 @@ class User < ApplicationRecord
   has_many :eoi_questionaires
  
 
+def before_import_save(record)
+  self.password = "1linkwok@"
+  self.password_confirmation = "1linkwok@"
+end
+
+ 
+
 end
