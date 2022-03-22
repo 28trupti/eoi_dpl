@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'caxlsx'
 gem 'caxlsx_rails'
+gem "rails_admin_import", "~> 3.0"
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
