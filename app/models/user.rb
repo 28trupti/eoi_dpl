@@ -10,8 +10,8 @@ class User < ApplicationRecord
  
 
 def before_import_save(record)
-  self.password = "1linkwok@"
-  self.password_confirmation = "1linkwok@"
+  self.password = "1deepakEOI@"
+  self.password_confirmation = "1deepakEOI@"
 end
 
  
