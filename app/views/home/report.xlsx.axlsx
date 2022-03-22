@@ -11,90 +11,49 @@ wb.add_worksheet(name: "eoi_questionaires") do |sheet|
   sheet.add_row(["Profit and Loss Statement for FY 20-21 along with schedules", data["profit_loss20_21"]])
   sheet.add_row(["Profit and Loss Statement for Current FY (Half yearly / 9 monthly / Quarterly) along with schedules", data["profit_loss_current"]])
   sheet.add_row(["2. Credit Rating"])
-  d = []
-  d << "Rating Agency Name"
-  data.each do |key, value|
-    if key.include? "ratingagencyname"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
-  d = []
-  d << "Credit Rating"
-  data.each do |key, value|
-    if key.include? "creaditratings"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
-   d = []
-  d << "Upload Document"
-  data.each do |key, value|
-    if key.include? "creditratingfile"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
+  sheet.add_row(["Rating Agency Name", "Credit Ratings", "Upload Document"])
+  index_i = 1
+  loop do 
+        sheet.add_row([data["ratingagencyname[#{index_i}]"], data["creaditratings[#{index_i}]"], data["creditratingfile[#{index_i}]"]])
+        index_i=index_i+1
+        if data["ratingagencyname[#{index_i}]"].blank?
+          break 
+        end
+  end
   sheet.add_row(["3. Banking Facilities"])
-  d = []
-  d << "Name of the Bank"
-  data.each do |key, value|
-    if key.include? "bankname"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
-  d = []
-  d << "Facilities availed from the bank"
-  data.each do |key, value|
-    if key.include? "bankfacilities"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
-  d = []
-  d << "Limit"
-  data.each do |key, value|
-    if key.include? "limit"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
+  sheet.add_row(["Name of the bank", "Facilities availed from the bank", "limit" ])
+  index_i = 1
+  loop do 
+        sheet.add_row([data["bankname[#{index_i}]"], data["bankfacilities[#{index_i}]"], data["limit[#{index_i}]"]])
+        index_i=index_i+1
+        if data["bankname[#{index_i}]"].blank?
+          break 
+        end
+  end
   sheet.add_row(["4. Sales Organogram"])
   sheet.add_row(["A. Location of Offices : SPOC for each location"])
-  d = []
-  d << "Name of location"
-  data.each do |key, value|
-    if key.include? "locationname"
-      d << value
-    end
-  end 
-  sheet.add_row(d)
-  d = []
-  d << "SPOC Name"
-  data.each do |key, value|
-    if key.include? "locspocname"
-      d << value
-    end
+
+  sheet.add_row(["Name of location", "SPOC Name"])
+  index_i = 1
+  loop do 
+        sheet.add_row([data["locationname[#{index_i}]"], data["locspocname[#{index_i}]"]])
+        index_i=index_i+1
+        if data["locationname[#{index_i}]"].blank?
+          break 
+        end
   end
-  sheet.add_row(d)
+
   sheet.add_row(["B.Technical Support Team availability"])
-  d = []
-  d << "Name of location"
-  data.each do |key, value|
-    if key.include? "tecnameofloc"
-      d << value
-    end
+  sheet.add_row(["Name of location", "SPOC Name"])
+  index_i = 1
+  loop do 
+        sheet.add_row([data["tecnameofloc[#{index_i}]"], data["tecspocname[#{index_i}]"]])
+        index_i=index_i+1
+        if data["tecnameofloc[#{index_i}]"].blank?
+          break 
+        end
   end
-  sheet.add_row(d)
-  d = []
-  d << "SPOC Name"
-  data.each do |key, value|
-    if key.include? "tecspocname"
-      d << value
-    end
-  end
-  sheet.add_row(d)
+
   sheet.add_row(["C. Sales team Details"])
   d = []
   d << "Name of the sales person"
