@@ -27,7 +27,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'caxlsx'
 gem 'caxlsx_rails'
-gem "rails_admin_import"
+gem 'exception_notification'
+
 
 
 # Use Active Storage variant

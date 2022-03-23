@@ -1303,7 +1303,6 @@ GEM
     caxlsx_rails (0.6.3)
       actionpack (>= 3.1)
       caxlsx (>= 3.0)
-    charlock_holmes (0.7.7)
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
@@ -1314,6 +1313,9 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.10.0)
+    exception_notification (4.5.0)
+      actionmailer (>= 5.2, < 8)
+      activesupport (>= 5.2, < 8)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -1395,11 +1397,6 @@ GEM
       nested_form (~> 0.3)
       rails (>= 6.0, < 8)
       turbo-rails (~> 1.0)
-    rails_admin_import (3.0.0)
-      charlock_holmes (~> 0.7)
-      rails (>= 3.2)
-      rails_admin (>= 3.0.0.beta)
-      simple_xlsx_reader (~> 1.0)
     railties (6.1.5)
       actionpack (= 6.1.5)
       activesupport (= 6.1.5)
@@ -1431,9 +1428,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
-    simple_xlsx_reader (1.0.4)
-      nokogiri
-      rubyzip
     spring (4.0.0)
     sprockets (4.0.3)
       concurrent-ruby (~> 1.0)
@@ -1486,6 +1480,7 @@ DEPENDENCIES
   caxlsx
   caxlsx_rails
   devise
+  exception_notification
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (= 1.1)
@@ -1493,7 +1488,6 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.3, >= 6.1.3.2)
   rails_admin (>= 3.0.0.rc3, < 4)
-  rails_admin_import
   sass-rails (>= 6)
   selenium-webdriver
   spring
